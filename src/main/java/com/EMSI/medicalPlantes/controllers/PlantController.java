@@ -2,6 +2,7 @@ package com.EMSI.medicalPlantes.controllers;
 
 import com.EMSI.medicalPlantes.models.Plant;
 import com.EMSI.medicalPlantes.services.PlantService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,7 +16,7 @@ public class PlantController {
     private PlantService plantService;
 
     @PostMapping
-    public Plant createPlant(@RequestBody Plant plant) {
+    public Plant createPlant(@Valid @RequestBody Plant plant) {
         return plantService.savePlant(plant);
     }
 
@@ -30,7 +31,7 @@ public class PlantController {
     }
 
     @PutMapping("/{id}")
-    public Plant updatePlant(@PathVariable Long id, @RequestBody Plant plant) {
+    public Plant updatePlant(@PathVariable Long id, @Valid @RequestBody Plant plant) {
         plant.setId(id);
         return plantService.savePlant(plant);
     }
