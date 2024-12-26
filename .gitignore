@@ -31,7 +31,8 @@ build/
 
 ### VS Code ###
 .vscode/
-
+/Desktop
+/Desktop.pub
 ### Application Properties ###
 # Uncomment the following line if you want to exclude application.properties
 # src/main/resources/application.properties
