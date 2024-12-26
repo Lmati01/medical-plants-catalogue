@@ -31,7 +31,9 @@ build/
 
 ### VS Code ###
 .vscode/
+### private key###
 /Desktop
+##public key##
 /Desktop.pub
 ### Application Properties ###
 # Uncomment the following line if you want to exclude application.properties
